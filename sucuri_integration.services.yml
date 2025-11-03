@@ -1,0 +1,6 @@
+services:
+  sucuri_integration.node_save_subscriber:
+    class: Drupal\sucuri_integration\EventSubscriber\NodeSaveSubscriber
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: event_subscriber }

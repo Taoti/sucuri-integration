@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Contains sucuri_integration.module.
+ */
+
+declare(strict_types = 1);
+
+/**
+ * Implements hook_page_attachments().
+ */
+function sucuri_integration_page_attachments(array &$page) {
+  if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+    $page['#attached']['library'][] = 'sucuri_integration/admin';
+  }
+}

@@ -1,0 +1,6 @@
+sucuri_integration.sucuri_settings:
+  title: 'Sucuri'
+  route_name: sucuri_integration.sucuri_settings
+  description: 'Configure Sucuri'
+  parent: system.admin_config_services
+  weight: 99

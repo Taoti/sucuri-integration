@@ -1,0 +1,23 @@
+.sucuri-settings #edit-links .fieldset__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: stretch;
+}
+
+.sucuri-settings #edit-links .fieldset__wrapper .link {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.sucuri-settings #edit-links .fieldset__wrapper .link a {
+  display: block;
+  padding: 7px 10px;
+  background-color: blue;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.85rem;
+  text-align: center;
+  text-decoration: none;
+}

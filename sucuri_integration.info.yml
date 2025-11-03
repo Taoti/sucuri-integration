@@ -1,0 +1,4 @@
+name: Sucuri Integration
+description: Module that controls Sucuri features.
+core_version_requirement: ^9 || ^10 || ^11
+type: module
