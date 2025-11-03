@@ -32,14 +32,6 @@ class SucuriSettings extends ConfigFormBase {
       '#collapsed' => FALSE,
     ];
 
-    $form['api']['api_key_plugin'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('API Key (for Plugin)'),
-      '#maxlength' => 128,
-      '#size' => 64,
-      '#default_value' => $config->get('api_key_plugin'),
-    ];
-
     $form['api']['api_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('API Key'),
@@ -63,22 +55,22 @@ class SucuriSettings extends ConfigFormBase {
 
     $form['links']['clear_cache'] = [
       '#type'   => 'markup',
-      '#markup' => '<div class="link"><a href="https://waf.sucuri.net/api?k='. $config->get('api_key_plugin') .'&a=clearcache">Clear Cache</a></div>',
+      '#markup' => '<div class="link"><a href="https://waf.sucuri.net/api?k='. $config->get('api_key') . '&s='. $config->get('api_secret') .'&a=clearcache">Clear Cache</a></div>',
     ];
 
     $form['links']['allow_ip'] = [
       '#type'   => 'markup',
-      '#markup' => '<div class="link"><a href="https://waf.sucuri.net/api?k='. $config->get('api_key_plugin') .'&a=allowlist">Allow IP</a></div>',
+      '#markup' => '<div class="link"><a href="https://waf.sucuri.net/api?k='. $config->get('api_key') . '&s='. $config->get('api_secret') .'&a=allowlist">Allow IP</a></div>',
     ];
 
     $form['links']['audit_trails'] = [
       '#type'   => 'markup',
-      '#markup' => '<div class="link"><a href="https://waf.sucuri.net/api?k='. $config->get('api_key_plugin') .'&a=auditshow">Audit Trails</a></div>',
+      '#markup' => '<div class="link"><a href="https://waf.sucuri.net/api?k='. $config->get('api_key') . '&s='. $config->get('api_secret') .'&a=auditshow">Audit Trails</a></div>',
     ];
 
     $form['links']['add_ip'] = [
       '#type'   => 'markup',
-      '#markup' => '<div class="link"><a href="https://waf.sucuri.net/api?k='. $config->get('api_key_plugin') .'&a=devmode_ip">Add IP to Dev. Mode</a></div>',
+      '#markup' => '<div class="link"><a href="https://waf.sucuri.net/api?k='. $config->get('api_key') . '&s='. $config->get('api_secret') .'&a=devmode_ip">Add IP to Dev. Mode</a></div>',
     ];
 
     return parent::buildForm($form, $form_state);
