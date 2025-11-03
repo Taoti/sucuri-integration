@@ -83,7 +83,6 @@ class SucuriSettings extends ConfigFormBase {
     parent::submitForm($form, $form_state);
 
     $this->config('sucuri_integration.sucurisettings')
-      ->set('api_key_plugin', $form_state->getValue('api_key_plugin'))
       ->set('api_key', $form_state->getValue('api_key'))
       ->set('api_secret', $form_state->getValue('api_secret'))
       ->save();
